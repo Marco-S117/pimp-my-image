@@ -20,7 +20,7 @@
     <div class="row bg-info">
       <div class="col-12">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand text-uppercase text-white" href="/brownie-be/index.php">Pimp My Images</a>
+          <a class="navbar-brand text-uppercase text-white" href="./index.php">Pimp My Images</a>
 
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
