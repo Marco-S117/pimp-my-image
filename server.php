@@ -63,6 +63,9 @@
             if($_POST['filter'] == 2){
               imagefilter($dist, IMG_FILTER_NEGATE);
             }
+            if($_POST['filter'] == 3){
+              imagefilter($dist, IMG_FILTER_PIXELATE, 10);
+            }
           }
   
           // Setto i margini per il watermark 
