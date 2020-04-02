@@ -1,4 +1,4 @@
-<?php include_once 'server.php' ?> 
+<?php include 'server.php' ?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title>Document</title>
+  <title>Pimp My Images | Marco Polino</title>
 </head>
 
 <style>
@@ -20,7 +20,7 @@
     <div class="row bg-info">
       <div class="col-12">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand text-uppercase" href="#">PmI</a>
+          <a class="navbar-brand text-uppercase text-white" href="/brownie-be/index.php">Pimp My Images</a>
 
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
@@ -39,32 +39,33 @@
     <div class="row bg-light">
       <div class="col-12">
         <main class="p-4">
-          <h4>Welcome to Pimp my Images</h4>
-          <p>Upload your photos and aplly a filter!</p>
+          <h4>Benvenuto su Pimp my Images</h4>
+          <p>Carica le tue foto e apllica filtri mozzifiato!</p>
 
           <div class="my-5 d-flex justify-content-center alert alert-info">
             <form action="index.php" method="post" enctype="multipart/form-data">
 
-              <label>Select files to upload</label>
+              <label>Seleziona files</label>
               <div class="input-group mb-3">
                 <div class="custom-file">
                   <input type="file" name="files[]" class="custom-file-input" id="inputGroupFile03" multiple>
-                  <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                  <label class="custom-file-label" for="inputGroupFile03">Scegli files</label>
                 </div>
               </div>
 
-              <label for="filter">Select an effect</label>
+              <label for="filter">Seleziona effetto</label>
               <div class="input-group mb-3">
                 <select name="filter" class="form-control">
-                  <option value="0">Select a filter</option>
+                  <option value="0">Nessun effetto</option>
                   <option value="1">Bianco e nero</option>
                   <option value="2">Negativo</option>
+                  <option value="3">Pixel</option>
                 </select>
               </div>
 
               <label for="filter"></label>
               <div class="input-group mb-3">
-                <input type="submit" name="submit" value="Upload" class="form-control">
+                <input type="submit" name="submit" value="Carica" class="form-control">
               </div>
 
             </form>
@@ -76,7 +77,7 @@
               if(count($warnings) > 0){
                 echo ('<ul class="alert alert-warning px-5">');
                 foreach ($warnings as $warning) {
-                  echo ("<li>File " . $warning . " not allowed</li>");
+                  echo ("<li>File " . $warning . " non consentito</li>");
                 }
                 echo ('</ul>');
               } 
